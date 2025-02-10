@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Construction__c</fullName>
+    <description>Construction that is used for Pricing Selector</description>
+    <externalId>false</externalId>
+    <formula>CASE(CDS_Design_Service__r.Product_Type__c , 
+	&apos;Resilient&apos;, &apos;Resilient&apos;, 
+	&apos;Ceramic&apos;, &apos;Ceramic&apos;,
+	&apos;Vinyl Wall Base&apos;,&apos;Vinyl Wall Base&apos;,
+	&apos;Tile &amp; Stone&apos;,&apos;Tile &amp; Stone&apos;,
+	IF(TEXT(Colorization__c) = &apos;&apos;, 
+		CASE(CDS_Design_Service__r.Construction__c, 
+			&apos;Axminster&apos;, &apos;Axminster&apos;, 
+			&apos;Print&apos;, &apos;Print&apos;, 
+			&apos;Canvas&apos;, &apos;Print&apos;, 
+			&apos;Canvas (Tile)&apos;, 
+			&apos;Print&apos;, &apos;&apos;, 
+			&apos;&apos;, &apos;Tuft&apos;), 
+	CASE(Colorization__c, &apos;Printed&apos;, 
+		CASE(CDS_Design_Service__r.Construction__c, 
+			&apos;Axminster&apos;, &apos;Axminster&apos;, &apos;Print&apos;), 
+				&apos;Tuft&apos;)
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Service Construction</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

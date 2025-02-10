@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EBX_Product_Query_String__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Type__c == &apos;product&apos;,
+  SUBSTITUTE(
+    SUBSTITUTE(
+      IF($Organization.Id == $Setup.Production_Org_Ids__c.Org_Id_15_char__c,
+        $CustomMetadata.EBX_Integration_Setting__mdt.Production.QueryString_Product__c,
+        $CustomMetadata.EBX_Integration_Setting__mdt.Test.QueryString_Product__c
+      ), &apos;{0}&apos;, Style_Number__c
+    ), &apos;{1}&apos;,  Color_Number__c
+  ),
+  &apos;&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>EBX Product Query String</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

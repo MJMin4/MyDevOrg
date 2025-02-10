@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Summary_String__c</fullName>
+    <description>formatted string representation of a few picklist fields</description>
+    <externalId>false</externalId>
+    <formula>MDM_Key__c + &apos; • &apos; +
+
+IF(TEXT(Colorization__c) != &apos;&apos;, TEXT(Colorization__c) +&apos; • &apos;, &apos;&apos;)+
+
+Gauge__c+&apos; &apos;+
+
+IF(TEXT(Gauge_Type__c) != &apos;&apos;, TEXT(Gauge_Type__c) +&apos; • &apos;,&apos;&apos;) +
+
+TEXT(Face_Weight__c) + &apos; • &apos;+ TEXT(Carpet_Category__c) + 
+
+IF(Custom_Project__r.Name != &apos;&apos;, &apos; • &apos;+Custom_Project__r.Name, &apos;&apos;)+
+
+&apos; • &apos; + RecordType.Name</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Summary String</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

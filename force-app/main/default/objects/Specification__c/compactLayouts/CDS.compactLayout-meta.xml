@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CDS</fullName>
+    <fields>Name</fields>
+    <fields>Product_ID_formula__c</fields>
+    <fields>Colorization__c</fields>
+    <fields>Gauge__c</fields>
+    <fields>Gauge_Type__c</fields>
+    <fields>Carpet_Category__c</fields>
+    <label>CDS</label>
+</CompactLayout>

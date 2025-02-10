@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Computed_Form__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Service_Construction__c  = &apos;Vinyl Wall Base&apos;  ||  Service_Construction__c  = &apos;Ceramic&apos;,  TEXT(CDS_Design_Service__r.Carpet_Type__c) ,  Form__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Computed Form</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

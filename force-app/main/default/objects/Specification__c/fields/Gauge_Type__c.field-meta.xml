@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gauge_Type__c</fullName>
+    <description>00, 2P, LL, TL, NB, MS, etc.</description>
+    <label>Gauge Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>00</fullName>
+                <default>false</default>
+                <label>00</label>
+            </value>
+            <value>
+                <fullName>2P</fullName>
+                <default>false</default>
+                <label>2P</label>
+            </value>
+            <value>
+                <fullName>LL</fullName>
+                <default>false</default>
+                <label>LL</label>
+            </value>
+            <value>
+                <fullName>MS</fullName>
+                <default>false</default>
+                <label>MS</label>
+            </value>
+            <value>
+                <fullName>NB</fullName>
+                <default>false</default>
+                <label>NB</label>
+            </value>
+            <value>
+                <fullName>TL</fullName>
+                <default>false</default>
+                <label>TL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

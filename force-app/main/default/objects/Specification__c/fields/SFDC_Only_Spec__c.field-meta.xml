@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Only_Spec__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>only lives in SFDC, is a clone of an existing MDM spec.</description>
+    <inlineHelpText>Indicates that this Specification was created as part of a Standalone CAD/Stage. If checked, this Specification cannot be edited.</inlineHelpText>
+    <label>SFDC-Only Spec</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
